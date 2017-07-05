@@ -1,0 +1,271 @@
+/* TODO
+- svg logo
+
+*/
+
+/* Common */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after,
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 1160px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+/* Header */
+
+.header {
+  padding: 50px 0 0;
+  margin-bottom: 80px;
+}
+
+.header .logo {
+  float: left;
+  width: 160px;
+  margin-right: 140px;
+
+  /* TODO: for Grid - Delete */
+  min-height: 65px;
+}
+
+.header .logo img {
+  display: block;
+}
+
+.header .main-nav {
+  float: left;
+  width: 560px;
+
+  /* TODO: for Grid - Delete */
+  min-height: 65px;
+}
+
+.header .main-nav li {
+  display: inline-block;
+}
+
+.header .cart {
+  float: right;
+  width: 160px;
+
+  /* TODO: for Grid - Delete */
+  min-height: 65px;
+}
+
+.promo-slider {
+  clear: both;
+  padding: 75px 0;
+}
+
+.promo-slider-list {
+  float: left;
+  width: 400px;
+  margin: 0; margin-right: 100px;
+  padding: 0;
+  list-style: none;
+
+  /* TODO: for Grid - Delete */
+  min-height: 280px;
+}
+
+.promo-slider-item {
+
+}
+
+.promo-slider-paginator {
+  float: left;
+  width: 160px;
+}
+
+.promo-slider-paginator li {
+  display: inline-block;
+}
+
+/* EO Header */
+
+/* Main  */
+
+/* Advantages */
+
+.advantages {
+  margin-bottom: 80px;
+}
+
+.advantages-item {
+  float: left;
+  width: 300px;
+  min-height: 350px;
+  margin-right: 100px;
+}
+
+.advantages-item:last-child { margin-right: 0; }
+
+/* About */
+
+.about {
+  margin-bottom: 75px;
+  padding-top: 75px;
+}
+
+.about-content {
+  float: left;
+  width: 660px;
+
+  /* TODO: for Grid - Delete */
+  min-height: 375px;
+}
+
+.about-aside {
+  float: right;
+  width: 360px;
+
+  /* TODO: for Grid - Delete */
+  min-height: 375px;
+}
+
+.about-aside img {
+  display: block;
+  margin-top: -35px;
+}
+
+/* Work sites */
+
+.work-sites {
+  margin-bottom: 80px;
+  padding: 45px 0;
+}
+
+.work-sites ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-sites li  { display: inline-block; }
+
+/* EO Main  */
+
+/* Footer */
+
+.footer-contacts {
+  position: relative;
+  padding: 55px 0;
+}
+
+.footer-contacts .map {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.footer-contacts .map-marker {
+  position: absolute;
+  top: 90px; left: 820px;
+}
+
+.footer-contacts-content {
+  width: 320px;
+  min-height: 305px;
+}
+
+.footer-contacts-content .title {
+  margin-top: 0;
+}
+
+.footer-social {
+  padding: 70px 0;
+}
+
+.footer-social-content {
+  float: right;
+  width: 660px;
+  margin-right: 100px;
+}
+
+.footer-social-links {
+  float: left;
+  width: 260px;
+
+  /* TODO: for Grid - Delete */
+  min-height: 75px;
+}
+
+.footer-social-links a {
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+/* EO Footer */
+
+
+
+
+
+
+/* Test styles for grid */
+body {
+  margin-top: 15px;
+  min-width: 1124px;
+  min-height: 1716px;
+  background: #fff url(../img/nerds-index.jpg) 50% 15px no-repeat;
+}
+
+
+body > *,
+body > * > *,
+body > * > * > * {
+  position: relative;
+}
+
+body > * {
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 2px green;
+}
+
+body > * > * {
+  background: rgba(128, 0, 0, 0.2);
+  box-shadow: 0 0 0 2px red;
+}
+
+body > * > * > * {
+  background: rgba(128, 128, 0, 0.2);
+  box-shadow: inset 0 0 0 2px yellow;
+}
+
+body > *:before,
+body > * > *:before,
+body > * > * > *:before {
+  content: attr(class);
+  position: absolute;
+  top: 0; left: 0;
+  padding: 3px 5px;
+  color: #fff;
+  font: bold 12px/12px Lucida Console, Lucida Sans Typewriter, monaco, monospace;
+}
+
+body > * > *:before {
+  left: -2px;
+  transform: translateY(-100%);
+}
+
+body > *:before { background: green; }
+body > * > *:before { background: red; }
+body > * > * > *:before { color: #000; background: yellow; }
