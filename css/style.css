@@ -226,8 +226,16 @@ body {
   min-width: 1124px;
   min-height: 1716px;
   background: #fff url(../img/nerds-index.jpg) 50% 15px no-repeat;
+  background-image: none;
 }
 
+.index-page {
+  background-image: url(../img/nerds-index.jpg);
+}
+
+.catalog-page {
+  background-image: url(../img/nerds-catalog.jpg);
+}
 
 body > *,
 body > * > *,
