@@ -7,7 +7,7 @@
 </head>
 <body class="catalog-page">
   <header class="header">
-    <div class="container">
+    <div class="header-layout container">
       <div class="logo">
         <img src="img/logo.png" alt="nёrd's" width="160" height="65">
       </div>
@@ -26,7 +26,7 @@
     </div>
     <h1 class="page-title">Магазин готовых шаблонов</h1>
   </header>
-  <main class="container">
+  <main class="main-layout container">
     <aside class="catalog-sidebar">
       <form action="" method="get" class="catalog-filters">
         <fieldset>
@@ -90,73 +90,71 @@
     <section class="catalog-content">
       <div class="catalog-sort">
         <b class="legend">Cортировать:</b>
-        <ul class="options">
-          <li><a href="#">По цене</a></li>
-          <li><a href="#">По типу</a></li>
-          <li><a href="#">По названию</a></li>
-        </ul>
-        <ul class="order">
-          <li><a href="#">По убыванию</a></li>
-          <li><a href="#">По возрастанию</a></li>
-        </ul>
+        <div class="controls">
+          <a href="#">По цене</a>
+          <a href="#">По типу</a>
+          <a href="#">По названию</a>
+          <a class="order-asc" href="#">По убыванию</a>
+          <a class="order-desc" href="#">По возрастанию</a>
+        </div>
       </div>
       <div class="catalog-list">
         <article class="catalog-item">
-          <img src="img/item-sedona.jpg" alt="Sedona preview">
-          <h2 class="title">Sedona</h2>
-          <p>Информационный сайт для туристов</p>
-          <a href="#" class="btn btn-buy">9 900 руб.</a>
+          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-content">
+            <h2 class="title">Sedona</h2>
+            <p>Информационный сайт для туристов</p>
+            <a href="#" class="btn btn-buy">9 900 руб.</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <img src="img/item-sedona.jpg" alt="Sedona preview">
-          <h2 class="title">Sedona</h2>
-          <p>Информационный сайт для туристов</p>
-          <a href="#" class="btn btn-buy">9 900 руб.</a>
+          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-content">
+            <h2 class="title">Sedona</h2>
+            <p>Информационный сайт для туристов</p>
+            <a href="#" class="btn btn-buy">9 900 руб.</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <img src="img/item-sedona.jpg" alt="Sedona preview">
-          <h2 class="title">Sedona</h2>
-          <p>Информационный сайт для туристов</p>
-          <a href="#" class="btn btn-buy">9 900 руб.</a>
+          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-content">
+            <h2 class="title">Sedona</h2>
+            <p>Информационный сайт для туристов</p>
+            <a href="#" class="btn btn-buy">9 900 руб.</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <img src="img/item-sedona.jpg" alt="Sedona preview">
-          <h2 class="title">Sedona</h2>
-          <p>Информационный сайт для туристов</p>
-          <a href="#" class="btn btn-buy">9 900 руб.</a>
+          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-content">
+            <h2 class="title">Sedona</h2>
+            <p>Информационный сайт для туристов</p>
+            <a href="#" class="btn btn-buy">9 900 руб.</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <img src="img/item-sedona.jpg" alt="Sedona preview">
-          <h2 class="title">Sedona</h2>
-          <p>Информационный сайт для туристов</p>
-          <a href="#" class="btn btn-buy">9 900 руб.</a>
+          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-content">
+            <h2 class="title">Sedona</h2>
+            <p>Информационный сайт для туристов</p>
+            <a href="#" class="btn btn-buy">9 900 руб.</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <img src="img/item-sedona.jpg" alt="Sedona preview">
-          <h2 class="title">Sedona</h2>
-          <p>Информационный сайт для туристов</p>
-          <a href="#" class="btn btn-buy">9 900 руб.</a>
+          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-content">
+            <h2 class="title">Sedona</h2>
+            <p>Информационный сайт для туристов</p>
+            <a href="#" class="btn btn-buy">9 900 руб.</a>
+          </div>
         </article>
       </div>
       <div class="catalog-paginator">
-        <ul>
-          <li><a href="#">1</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">2</a></li>
-        </ul>
-        <a href="#" class="next">Следующая</a>
+        <a>1</a>
+        <a href="#">3</a>
+        <a href="#">2</a>
+        <a class="next" href="#">Следующая</a>
       </div>
     </section>
-
-
-
-
-
-
-
-
-
-
   </main>
   <footer class="footer">
     <section class="footer-contacts">

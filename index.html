@@ -2,88 +2,112 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Nёrd's design studio</title>
 </head>
 <body class="index-page">
   <header class="header">
-    <div class="container">
-      <div class="logo">
+    <div class="header-layout container">
+      <a class="logo">
         <img src="img/logo.png" alt="nёrd's" width="160" height="65">
-      </div>
+      </a>
       <nav class="main-nav">
         <ul>
           <li><a>Студия</a></li>
           <li><a href="#">Клиенты</a></li>
           <li><a href="#">Магазин</a></li>
-          <li><a href="#">Студия</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
       <section class="cart">
         <a href="#" class="show-cart">Корзина</a>
       </section>
-      <section class="promo-slider clearfix">
-        <ul class="promo-slider-list">
-          <li class="promo-slider-item">
-            <h2 class="title">Долго, дорого, скрупулезно.</h2>
-            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-            <a href="#" class="btn">Узнать больше</a>
-          </li>
-        </ul>
-        <ul class="promo-slider-paginator">
-          <li><button disabled>1</button></li>
-          <li><button>2</button></li>
-          <li><button>3</button></li>
-        </ul>
-      </section>
     </div>
+    <section class="slider container">
+      <input type="radio" name="slider-btn" id="slider-btn-1" checked>
+      <input type="radio" name="slider-btn" id="slider-btn-2">
+      <input type="radio" name="slider-btn" id="slider-btn-3">
+      <ul class="slides">
+        <li class="slide">
+          <div class="slide-text">
+            <h2 class="title">Долго, дорого,<br> скрупулезно.</h2>
+            <p>Математически выверенный дизайн<br>
+              для вашего сайта или мобильного приложения.</p>
+            <a href="#" class="btn btn-primary">Узнать больше</a>
+          </div>
+        </li>
+        <li class="slide">
+          <div class="slide-text">
+            <h2 class="title">Любим математику как никто другой</h2>
+            <p>Никакого креатива, только математические формулы <br>
+              для расчета идеальных пропорций.</p>
+            <a href="#" class="btn btn-primary">Узнать больше</a>
+          </div>
+        </li>
+        <li class="slide">
+          <div class="slide-text">
+            <h2 class="title">Только ночь,<br> только хардкор</h2>
+            <p>Работать днем, как все? Мы против этого.<br>
+              Ближе к полуночи работа только начинается.</p>
+            <a href="#" class="btn btn-primary">Узнать больше</a>
+          </div>
+        </li>
+      </ul>
+      <div class="slider-controls">
+        <label for="slider-btn-1">1</label>
+        <label for="slider-btn-2">2</label>
+        <label for="slider-btn-3">3</label>
+      </div>
+    </section>
   </header>
-  <main class="container">
-    <section class="advantages clearfix">
+  <main class="index-main container">
+    <section class="advantages">
       <div class="advantages-item">
         <img src="img/advantages-1.jpg" alt="" width="300" height="146">
         <h3 class="title">Веб-сайты</h3>
         <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-        <a href="#" class="btn">Заказать</a>
+        <a href="#" class="btn btn-primary">Заказать</a>
       </div>
       <div class="advantages-item">
         <img src="img/advantages-2.jpg" alt="" alt="" width="300" height="146">
         <h3 class="title">Приложения</h3>
         <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-        <a href="#" class="btn">Заказать</a>
+        <a href="#" class="btn btn-primary">Заказать</a>
       </div>
       <div class="advantages-item">
         <img src="img/advantages-3.jpg" alt="" alt="" width="300" height="146">
         <h3 class="title">Презентации</h3>
         <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-        <a href="#" class="btn">Заказать</a>
+        <a href="#" class="btn btn-primary">Заказать</a>
       </div>
     </section>
-    <section class="about clearfix">
-      <div class="about-content">
-        <p class="lead"><b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b></p>
+    <section class="about">
+      <div class="about-left text">
+        <p class="lead">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
         <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
           превыше креатива. Работаем не покладая рук, как роботы.</p>
-        <h3 class="subtitle">Выполняем заказы на разработку:</h3>
+        <h2 class="subtitle">Выполняем заказы на разработку:</h3>
         <ul>
           <li>Веб-сайтов любой сложности</li>
           <li>Мобильных приложений для iOS и Android</li>
           <li>Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </div>
-      <aside class="about-aside">
-        <img src="img/about.jpg" alt="nёrd's" width="360" height="208">
-        <h3 class="subtitle">с 2004 года Любим точность во всем:</h3>
-        <ul>
+      <aside class="about-right text">
+        <img class="image" src="img/about-logo.jpg" alt="nёrd's" width="360" height="208">
+        <h2 class="subtitle">с 2004 года любим точность во всем:</h3>
+        <ul class="accuracy-list">
           <li>
-            <b>146%</b> Уровень самоотдачи
+            <b>146<i>%</i></b>
+            Уровень самоотдачи
           </li>
           <li>
-            <b>100%</b> Минимальная предоплата
+            <b>100<i>%</i></b> Соблюдение сроков
           </li>
           <li>
-            <b>50%</b> Соблюдение сроков
+            <b>50<i>%</i></b>  Минимальная предоплата
           </li>
         </ul>
       </aside>
@@ -109,12 +133,12 @@
             ул. Б. Конюшенная, д. 19/8
           </p>
           <p>тел. +7 (812) 275-75-75</p>
-          <a href="#" class="btn">Напишите нам</a>
+          <a href="#" class="btn btn-primary">Напишите нам</a>
         </div>
       </div>
     </section>
     <section class="footer-social container">
-      <div class="footer-social-content">
+      <div class="footer-social-content text">
         <h3 class="title">Давайте дружить, это выгодно!</h3>
         <p>Скидка 10% для друзей из социальных сетей</p>
       </div>
