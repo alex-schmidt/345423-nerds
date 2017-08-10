@@ -1,13 +1,13 @@
 /*
-* TODO: svg logo
+* TODO: width 880px
 * TODO: main-nav current
 * TODO: main-nav overflow
 * TODO: check min-heights
 * TODO: -title & .text
-* TODO: placeholders
 * TODO: links in nav
-* Done:
-* Index page. Markup fixes (slider, contacts). Added normalize.css, fonts.
+*
+* TODO: .columns via css property
+*
 */
 
 /* Common */
@@ -33,6 +33,14 @@ body {
 
 h1, h2, h3,
 h4, h5, h6 { color: #000; }
+
+a {
+  color: #fb565a;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; }
 
 .clearfix:after {
   content: "";
@@ -88,10 +96,12 @@ h4, h5, h6 { color: #000; }
 /* Header */
 
 .header {
-  padding: 50px 0 0;
+  padding: 50px 0;
   margin-bottom: 80px;
   background: #eee;
 }
+
+.inner-header { margin-bottom: 50px; }
 
 .header-layout {
   display: flex;
@@ -102,7 +112,6 @@ h4, h5, h6 { color: #000; }
 .logo img { display: block; }
 .logo[href]:hover { opacity: 0.8; }
 .logo[href]:active { opacity: 0.3; }
-
 
 .main-nav {
   min-width: 440px;
@@ -176,6 +185,7 @@ a.show-cart:active::before { opacity: 0.3 }
 
 .slider {
   position: relative;
+  margin-bottom: -50px;
 }
 
 .slider > input[type="radio"] { display: none; }
@@ -449,15 +459,12 @@ a.show-cart:active::before { opacity: 0.3 }
   background: #eee;
 }
 
-/* All content pages */
+/*** All inner pages ***/
+
 .page-title {
   font-size: 55px;
   line-height: 55px;
   text-align: center;
-
-  /* TODO: for Grid - Delete */
-  margin: 0;
-  min-height: 240px;
 }
 
 .main-layout {
@@ -465,9 +472,177 @@ a.show-cart:active::before { opacity: 0.3 }
   justify-content: space-between;
 }
 
+/*** All inner pages ****/
+
+/* Inner pages header */
+
+.inner-heading { margin-bottom: 45px; }
+
+.inner-title {
+  margin: 0 0 15px;
+  font-size: 30px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+
+.breadcrumbs {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  position: relative;
+  display: inline;
+  padding-right: 40px;
+}
+.breadcrumbs li::after {
+  content: "";
+  position: absolute;
+  top: 50%; right: 0;
+
+  width: 7px; height: 7px;
+  margin: -3.5px 15px 0;
+
+  vertical-align: middle;
+
+  background: #000;
+  transform: rotate(45deg);
+}
+
+.breadcrumbs a { color: #000; }
+
+.breadcrumbs li:last-child {
+  padding-right: 0;
+  color: #aba9a7;
+}
+.breadcrumbs li:last-child::after { display: none; }
+
+/* Inner pages content */
+
+.inner-content h2 {
+  margin: 60px 0 30px;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.inner-content p,
+.inner-content ul {
+  margin: 24px 0;
+}
+
+.inner-content ul {
+  padding: 0;
+  list-style: none;
+}
+
+.inner-content li {
+  position: relative;
+
+  padding-left: 20px;
+  margin-bottom: 13px;
+}
+.inner-content li:last-child { margin-bottom: 0; }
+
+.inner-content li::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 0;
+
+  width: 7px; height: 7px;
+  margin-top: -3.5px;
+
+  background: #000;
+  transform: rotate(45deg);
+}
+
+.inner-content table {
+  margin: 35px 0;
+  border-collapse: collapse;
+}
+
+.inner-content th,
+.inner-content td {
+  padding: 8px 17px;
+  border: 2px solid #000;
+}
+
+.inner-content .full-width { width: 100%; }
+.inner-content .equal-cells { table-layout: fixed; }
+.inner-content .short-text { padding-right: 80px; }
+
+.inner-content .price-table {
+  table-layout: fixed;
+  width: 100%;
+
+  text-align: center;
+}
+
+.inner-content .price-table td:first-child { text-align: left; }
+
+/* Lead text/heading */
+
+.inner-content .lead {
+  display: flex;
+  align-items: center;
+  margin: 0 0 60px;
+
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.inner-content .lead::before,
+.inner-content .lead::after {
+  content: "";
+
+  flex-grow: 1;
+  width: 50px;
+  height: 2px;
+
+  background: #000;
+}
+.inner-content .lead::before { margin-right: 25px; }
+.inner-content .lead::after { margin-left: 25px; }
+
+/* Columns */
+
+.inner-content .columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-content .columns + .columns { margin-top: 60px; }
+
+.inner-content .column-left,
+.inner-content .column-right {
+  width: 460px;
+}
+.inner-content .column-right { float: right; }
+
+.inner-content .column-left > *:first-child,
+.inner-content .column-right > *:first-child { margin-top: 0; }
+.inner-content .column-left > *:last-child,
+.inner-content .column-right > *:last-child { margin-bottom: 0; }
+
+.inner-content .columns-text {
+  column-count: 2;
+  column-width: 460px;
+  column-gap: 60px;
+  /*column-span: none;*/
+}
+
+
 /* Catalog page */
 
-.catalog-page .header { margin-bottom: 60px; }
+.catalog-page .header {
+  margin-bottom: 60px;
+
+  /* TODO: Grid */
+  min-height: 305px;
+}
 
 /* Catalog  sidebar */
 .catalog-sidebar {
@@ -549,6 +724,7 @@ a.show-cart:active::before { opacity: 0.3 }
   /* TODO: Grid */
   min-height: 50px;
 }
+
 
 /* EO Main  */
 
@@ -698,30 +874,22 @@ a.show-cart:active::before { opacity: 0.3 }
   background-image: url(../img/icon-social-inst.png);
 }
 
-
-
-
 /* EO Footer */
 
-/* TODO */
 
-.footer-social {
-  /*opacity: 0.5;*/
-  /*outline: 1px dashed blue;*/
+
+
+
+
+
+
+
+
+
+.chromeperfectpixel-overlay {
+  margin-left: 50% !important;
+  transform: translateX(-50%) !important;
 }
-
-.footer-social > * {
-  /*outline: 1px dashed red;*/
-}
-
-body {
-  background: #fff url(../img/nerds-index.jpg) 50% 0 no-repeat;
-}
-
-/* EO TODO */
-
-
-
 
 /* Test styles for grid
 
@@ -769,7 +937,7 @@ body > * > * > * {
 body > *:before,
 body > * > *:before,
 body > * > * > *:before {
-  /*content: attr(class);*/
+  content: attr(class);
   position: absolute;
   top: 0; left: 0;
   padding: 3px 5px;
