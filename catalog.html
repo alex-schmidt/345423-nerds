@@ -6,7 +6,7 @@
   <title>Nёrd's design studio - Магазин готовых шаблонов</title>
 </head>
 <body class="catalog-page">
-  <header class="header">
+  <header class="header inner-header">
     <div class="header-layout container">
       <div class="logo">
         <img src="img/logo.png" alt="nёrd's" width="160" height="65">
@@ -15,7 +15,7 @@
         <ul>
           <li><a>Студия</a></li>
           <li><a href="#">Клиенты</a></li>
-          <li><a href="#">Магазин</a></li>
+          <li><a>Магазин</a></li>
           <li><a href="#">Студия</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
@@ -27,123 +27,69 @@
     <h1 class="page-title container">Магазин готовых шаблонов</h1>
   </header>
   <main class="main-layout container">
-    <aside class="catalog-sidebar">
-      <form action="" method="get" class="catalog-filters">
-        <fieldset>
-          <legend>Cтоимость:</legend>
-          <div class="toggle">
-            <div class="toggle-slider">
-              <span class="left"></span>
-              <span class="right"></span>
-            </div>
-            <div class="toggle-controls">
-              <label for="filters_cost_from">от</label><input type="text" name="cost_from" id="filters_cost_from" value="0">
-              <label for="filters_cost_to">до</label> <input type="text" name="cost_to" id="filters_cost_to" value="15 000">
-            </div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Сетка:</legend>
-          <ul>
-            <li>
-              <input type="radio" name="grid_1" id="filters_grid_1">
-              <label for="grid_1">Адаптивная</label>
-            </li>
-            <li>
-              <input type="radio" name="grid_2" id="filters_grid_2">
-              <label for="grid_2">Фиксированная</label>
-            </li>
-            <li>
-              <input type="radio" name="grid_3" id="filters_grid_3">
-              <label for="grid_3">Резиновая</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend>Особенности:</legend>
-          <ul>
-            <li>
-              <input type="checkbox" name="feature_1" id="filters_feature_1">
-              <label for="feature_1">Слайдер</label>
-            </li>
-            <li>
-              <input type="checkbox" name="feature_2" id="filters_feature_2">
-              <label for="feature_2">Блок преимуществ</label>
-            </li>
-            <li>
-              <input type="checkbox" name="feature_3" id="filters_feature_3">
-              <label for="feature_3">Новости</label>
-            </li>
-            <li>
-              <input type="checkbox" name="feature_4" id="filters_feature_4">
-              <label for="feature_4">Галерея</label>
-            </li>
-            <li>
-              <input type="checkbox" name="feature_5" id="filters_feature_5">
-              <label for="feature_5">Корзина</label>
-            </li>
-          </ul>
-        </fieldset>
-        <a href="#" class="btn btn-show">Показать</a>
-      </form>
-    </aside>
     <section class="catalog-content">
       <div class="catalog-sort">
         <b class="legend">Cортировать:</b>
-        <div class="controls">
-          <a href="#">По цене</a>
+        <div class="catalog-sort-options">
+          <a>По цене</a>
           <a href="#">По типу</a>
           <a href="#">По названию</a>
-          <a class="order-asc" href="#">По убыванию</a>
-          <a class="order-desc" href="#">По возрастанию</a>
+          <a class="order order-asc">По убыванию</a>
+          <a class="order order-desc" href="#">По возрастанию</a>
         </div>
       </div>
       <div class="catalog-list">
         <article class="catalog-item">
-          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-top"><span></span></div>
+          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona site preview">
           <div class="catalog-item-content">
             <h2 class="title">Sedona</h2>
-            <p>Информационный сайт для туристов</p>
+            <p>Информационный сайт<br> для туристов</p>
             <a href="#" class="btn btn-buy">9 900 руб.</a>
           </div>
         </article>
         <article class="catalog-item">
-          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-top"><span></span></div>
+          <img class="catalog-item-image" src="img/item-pink.jpg" alt="Pink site preview">
           <div class="catalog-item-content">
-            <h2 class="title">Sedona</h2>
-            <p>Информационный сайт для туристов</p>
+            <h2 class="title">Pink App</h2>
+            <p>Продуктовый лендинг приложения для iOS и Android</p>
             <a href="#" class="btn btn-buy">9 900 руб.</a>
           </div>
         </article>
         <article class="catalog-item">
-          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-top"><span></span></div>
+          <img class="catalog-item-image" src="img/item-barbershop.jpg" alt="Barbershop site preview">
           <div class="catalog-item-content">
-            <h2 class="title">Sedona</h2>
-            <p>Информационный сайт для туристов</p>
+            <h2 class="title">Barbershop</h2>
+            <p>Сайт салоны красоты.<br> Для мужчин, да.</p>
             <a href="#" class="btn btn-buy">9 900 руб.</a>
           </div>
         </article>
         <article class="catalog-item">
-          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-top"><span></span></div>
+          <img class="catalog-item-image" src="img/item-mishka.jpg" alt="Mishka site preview">
           <div class="catalog-item-content">
-            <h2 class="title">Sedona</h2>
-            <p>Информационный сайт для туристов</p>
+            <h2 class="title">Mishka</h2>
+            <p>Интернет-магазин<br> вязаных игрушек</p>
             <a href="#" class="btn btn-buy">9 900 руб.</a>
           </div>
         </article>
         <article class="catalog-item">
-          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-top"><span></span></div>
+          <img class="catalog-item-image" src="img/item-aplus.jpg" alt="A Plus site preview">
           <div class="catalog-item-content">
-            <h2 class="title">Sedona</h2>
-            <p>Информационный сайт для туристов</p>
+            <h2 class="title">A Plus</h2>
+            <p>Лендинг курсов повышения квалификации</p>
             <a href="#" class="btn btn-buy">9 900 руб.</a>
           </div>
         </article>
         <article class="catalog-item">
-          <img class="catalog-item-image" src="img/item-sedona.jpg" alt="Sedona preview">
+          <div class="catalog-item-top"><span></span></div>
+          <img class="catalog-item-image" src="img/item-kvast.jpg" alt="Kvast site preview">
           <div class="catalog-item-content">
-            <h2 class="title">Sedona</h2>
-            <p>Информационный сайт для туристов</p>
+            <h2 class="title">Кваст</h2>
+            <p>Промо-сайт производителя крафтового кваса</p>
             <a href="#" class="btn btn-buy">9 900 руб.</a>
           </div>
         </article>
@@ -155,6 +101,71 @@
         <a class="next" href="#">Следующая</a>
       </div>
     </section>
+    <aside class="catalog-sidebar">
+      <form action="" method="get" class="catalog-filters">
+        <fieldset>
+          <legend>Cтоимость:</legend>
+          <div class="range-filter">
+            <div class="range-slider">
+              <div class="scale">
+                <span class="bar" style="left: 20%; width: 50%;"></span>
+                <span class="toggle toggle-min" style="left: 20%;"></span>
+                <span class="toggle toggle-max" style="left: 70%;"></span>
+              </div>
+            </div>
+            <div class="range-controls">
+              <label for="filters_cost_from">от</label>
+              <input type="text" name="price_min" id="filters_price_min" value="0">
+              <label for="filters_cost_to">до</label>
+              <input type="text" name="price_max" id="filters_price_max" value="15 000">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Сетка:</legend>
+          <ul>
+            <li>
+              <input type="radio" name="grid" id="filters_grid_1" checked>
+              <label for="filters_grid_1">Адаптивная</label>
+            </li>
+            <li>
+              <input type="radio" name="grid" id="filters_grid_2">
+              <label for="filters_grid_2">Фиксированная</label>
+            </li>
+            <li>
+              <input type="radio" name="grid" id="filters_grid_3">
+              <label for="filters_grid_3">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Особенности:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="feature_1" id="filters_feature_1">
+              <label for="filters_feature_1"><i></i>Слайдер</label>
+            </li>
+            <li>
+              <input type="checkbox" name="feature_2" id="filters_feature_2" checked>
+              <label for="filters_feature_2"><i></i>Блок преимуществ</label>
+            </li>
+            <li>
+              <input type="checkbox" name="feature_3" id="filters_feature_3">
+              <label for="filters_feature_3"><i></i>Новости</label>
+            </li>
+            <li>
+              <input type="checkbox" name="feature_4" id="filters_feature_4">
+              <label for="filters_feature_4"><i></i>Галерея</label>
+            </li>
+            <li>
+              <input type="checkbox" name="feature_5" id="filters_feature_5">
+              <label for="filters_feature_5"><i></i>Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <a href="#" class="btn btn-show" >Показать</a>
+      </form>
+    </aside>
   </main>
   <footer class="footer">
     <section class="footer-contacts">
