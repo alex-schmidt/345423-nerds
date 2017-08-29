@@ -1,17 +1,21 @@
 /*
-* TODO: width 880px
-* TODO: main-nav current
-* TODO: main-nav overflow
-* TODO: check min-heights
-* TODO: -title & .text
-* TODO: links in nav
-* TODO: .sr-only + (for all display: none; font-size: 0;)
-* TODO: @support (custom checkbox, radio)
-* TODO: delete todo's & min-height
-* TODO: aside outside main
-* TODO: catalog item hover slide up animation
 *
+* - corrected logo/nav markup & states; current state added; links to html files added
+* - catalog page title fixed, sort order buttons fixed
+* - main-nav overflow
+*
+* TODO: content recovering (headings etc) with .sr-only
+*       + (for all display: none; font-size: 0;)
+* TODO: @support (custom checkbox, radio)
+* TODO: aside outside main
+*
+* TODO: google & yandex map
+* TODO: login popup
+* TODO: delete todo's & min-height
+*
+* TODO: catalog item hover slide up animation
 * TODO: .columns via css property
+* TODO: width 880px
 *
 */
 
@@ -220,28 +224,31 @@ input[type="checkbox"] + label i::before {
   justify-content: space-between;
 }
 
-.logo { width: 160px; }
+.logo {
+  flex-shrink: 0;
+  width: 160px;
+}
 .logo img { display: block; }
 .logo[href]:hover { opacity: 0.8; }
 .logo[href]:active { opacity: 0.3; }
 
-.main-nav {
-  min-width: 440px;
-}
 
-.main-nav ul,
-.cart {
+.site-nav ul,
+.user-nav ul {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+
   padding: 20px 0 5px;
-  margin: 0 -10px;
+  margin: 0;
 
   list-style: none;
 }
 
-.main-nav a,
-.cart a {
+.site-nav a,
+.user-nav a {
   display: block;
+  position: relative;
+
   padding: 5px;
   margin: 0 5px;
 
@@ -255,26 +262,65 @@ input[type="checkbox"] + label i::before {
   transition: color 0.1s;
 }
 
-.main-nav a[href]:hover,
-.cart a[href]:hover { color: #fb565a; }
+.site-nav a::after,
+.user-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5px; right: 5px;
 
-.main-nav a[href]:active,
-.cart a[href]:active {
+  height: 2px;
+
+  background: #fb565a;
+}
+
+.site-nav a[href]::after,
+.user-nav a[href]::after { display: none; }
+
+.site-nav a[href]:hover,
+.user-nav a[href]:hover { color: #fb565a; }
+
+.site-nav a[href]:active,
+.user-nav a[href]:active {
+  color: #bdbdbd;
   color: rgba(0,0,0,0.3);
 }
 
-.cart {
+/* icons */
+
+.site-nav a[href]::before,
+.user-nav a[href]::before {
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+
+.site-nav a::before,
+.user-nav a::before,
+.site-nav a[href]:hover::before,
+.user-nav a[href]:hover::before,
+.site-nav a[href]:active::before,
+.user-nav a[href]:active::before { opacity: 0.3 }
+
+/* EO icons */
+
+.site-nav ul {
+  justify-content: space-between;
+
+  min-width: 460px;
+  max-width: 660px;
+}
+
+.user-nav ul {
   justify-content: flex-end;
-  width: 160px;
-  margin: 0;
+
+  min-width: 160px;
+  max-width: 260px;
+  margin-right: -10px;
 }
 
-a.show-cart {
-  position: relative;
+.user-nav li { max-width: 100%; }
 
-  padding-left: 40px;
-  margin-right: -5px;
-}
+a.show-cart { padding-left: 40px; }
 
 a.show-cart::before {
   content: "";
@@ -286,12 +332,7 @@ a.show-cart::before {
   height: 15px;
 
   background: url(../img/icon-cart.png);
-
-  transition: opacity 0.1s;
 }
-
-a.show-cart:hover::before,
-a.show-cart:active::before { opacity: 0.3 }
 
 /* Slider */
 
@@ -576,7 +617,8 @@ a.show-cart:active::before { opacity: 0.3 }
 /*** All inner pages ***/
 
 .page-title {
-  margin: 75px 0 60px;
+  margin-top: 75px;
+  margin-bottom: 60px;
 
   font-size: 55px;
   line-height: 55px;
@@ -901,6 +943,7 @@ a.show-cart:active::before { opacity: 0.3 }
 
 .catalog-sort-options {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
   width: 360px;
