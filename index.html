@@ -130,7 +130,8 @@
   </main>
   <footer class="footer">
     <section class="footer-contacts">
-      <img class="map" src="img/map.jpg" alt="Карта проезда" width="1440" height="416">
+      <img class="map-image" src="img/map.jpg" alt="Карта проезда" width="1440" height="416">
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6237753697767!2d30.32084911609701!3d59.93838483187612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca77c663%3A0xe2913435672b14c9!2s21Shop!5e0!3m2!1sru!2sua!4v1504014378267" width="1440" height="416" frameborder="0" allowfullscreen></iframe>
       <div class="container">
         <div class="footer-contacts-content">
           <p class="title">
@@ -142,7 +143,7 @@
           </p>
           <p>тел. +7 (812) 275-75-75</p>
           <p>
-            <a href="mailto:nerds@test.com" class="btn btn-primary">Напишите нам</a>
+            <a href="mailto:nerds@test.com" class="btn btn-primary js-open-feedback">Напишите нам</a>
           </p>
         </div>
       </div>
@@ -158,7 +159,33 @@
         <a href="#" class="social-btn social-btn-inst">Инстаграм</a>
       </div>
     </section>
+    <!-- Modals  -->
+    <section class="modal">
+      <button class="modal-close" type="button">Закрыть</button>
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form class="feedback-form" action="" method="post">
+        <legend class="modal-title">Напишите нам</legend>
+        <div class="row">
+          <p>
+            <label for="feedback_user">Ваше имя:</label>
+            <input type="text" name="user" id="feedback_user" placeholder="Представьтесь, пожалуйста">
+          </p>
+          <p>
+            <label for="feedback_mail">Ваш e-mail:</label>
+            <input type="email" name="mail" id="feedback_mail" placeholder="Для отправки ответа">
+          </p>
+        </div>
+        <p>
+          <label for="feedback_message">Текст письма:</label>
+          <textarea name="message" id="feedback_message" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+        </p>
+        <p class="actions">
+          <button type="submit" class="btn btn-primary">Отправить</button>
+        </p>
+      </form>
+    </section>
   </footer>
+  <script src="js/script.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
