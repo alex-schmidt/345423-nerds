@@ -4,15 +4,25 @@
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <!-- <link rel="stylesheet" href="css/style.prefix.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Nёrd's design studio</title>
 </head>
 <body class="index-page">
   <header class="header">
     <div class="header-layout container">
+    <!--
+      h1 separate from logo (in main or after nav)
+      Alternate:
       <h1 class="logo">
-        <img src="img/logo.png" alt="Nёrd's design studio" width="160" height="65">
+        <span class="visually-hidden">Nёrd's design studio<br></span>
+        <img src="img/logo.png" alt="" width="160" height="65">
       </h1>
+    -->
+      <a class="logo">
+        <img src="img/logo.png" alt="Nёrd's design studio" width="160" height="65">
+      </a>
       <nav class="site-nav">
         <ul>
           <li><a href="price.html">Студия</a></li>
@@ -27,6 +37,7 @@
         </ul>
       </nav>
     </div>
+    <h1 class="visually-hidden">Nёrd's design studio</h1>
     <section class="slider container">
       <h2 class="visually-hidden">Промо слайды</h2>
       <input type="radio" name="slider-btn" id="slider-btn-1" checked>
@@ -135,7 +146,7 @@
       <div class="container">
         <div class="footer-contacts-content">
           <p class="title">
-            <b>Nёrds design studio</b>
+            <strong>Nёrds design studio</strong>
           </p>
           <p>
             191186, Санкт-Петербург,<br>
@@ -154,6 +165,7 @@
         <p>Скидка 10% для друзей из социальных сетей</p>
       </div>
       <div class="footer-social-links">
+        <span class="visually-hidden">Подписывайтесь на нас:</span>
         <a href="#" class="social-btn social-btn-vk">Вконтакте</a><span class="visually-hidden">,</span>
         <a href="#" class="social-btn social-btn-fb">Фейсбук</a><span class="visually-hidden">,</span>
         <a href="#" class="social-btn social-btn-inst">Инстаграм</a>
@@ -185,7 +197,8 @@
       </form>
     </section>
   </footer>
-  <script src="js/script.js"></script>
-  <script src="http://localhost:35729/livereload.js"></script>
+  <!-- <script src="js/script.js"></script> -->
+  <script src="js/script.min.js"></script>
+  <!-- <script src="http://localhost:35729/livereload.js"></script> -->
 </body>
 </html>
